@@ -16,26 +16,6 @@ import img5 from "../assets/5.jpg";
             de escritorio de alta calidad.
           </p>
         </div>
-        <img class="carousel-img w-full" :src="img5" />
-      </div>
-      <div>
-        <div class="carousel-text">
-          <h1>TSI</h1>
-          <p>
-            Ofrecemos sistemas de facturación especializados y venta de equipos
-            de escritorio de alta calidad.
-          </p>
-        </div>
-        <img class="carousel-img w-full" :src="img2" />
-      </div>
-      <div>
-        <div class="carousel-text">
-          <h1>TSI</h1>
-          <p>
-            Ofrecemos sistemas de facturación especializados y venta de equipos
-            de escritorio de alta calidad.
-          </p>
-        </div>
         <img class="carousel-img w-full" :src="img3" />
       </div>
       <div>

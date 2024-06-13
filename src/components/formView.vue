@@ -1,19 +1,8 @@
 <script setup></script>
 
 <template>
-  <div
-    class="flex mx-10 gap-10 items-center md:flex flex-wrap justify-center m-1 md:items-center p-6"
-  >
-    <div class="md:w-1/2 lg:w-1/4 text-center md:text-left items-center">
-      <h1 class="font-bold text-4xl mb-4">Solicite asistencia personalizada</h1>
-      <p class="text-lg">
-        Contáctenos hoy para obtener orientación experta sobre nuestros sistemas
-        de facturación y equipos de escritorio. Permítanos ayudarle a encontrar
-        las soluciones adecuadas para las necesidades de su negocio.
-      </p>
-    </div>
-
-    <div class="w-full md:w-1/2 lg:w-1/4">
+  <div class="flex justify-center items-center p-10">
+    <div class="w-full bg-white">
       <form method="post" action="#">
         <div class="mb-4">
           <label class="block text-sm font-medium text-gray-900" for="name"
@@ -67,7 +56,7 @@
         </div>
         <div class="flex justify-center">
           <button
-            class="text-white bg-sky-500 px-4 py-2 font-bold rounded-md hover:bg-sky-600 w-full"
+            class="text-white bg-indigo-500 px-4 py-2 font-bold rounded-md hover:bg-indigo-600 w-full"
             type="submit"
           >
             Enviar Datos

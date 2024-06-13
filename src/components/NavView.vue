@@ -1,61 +1,54 @@
 <script setup>
-import { ref } from "vue";
+import { ref, defineComponent } from "vue";
+import tsi2 from "../assets/tsi2.png";
+import { useMessage } from "naive-ui";
 
 const optionsMenu = [
-  { name: "Home", path: "/" },
   {
-    name: "Sistemas de Facturacion",
-
-    path: "/gallery",
+    label: "Sistemas de Facturacion",
+    key: "facture",
   },
   {
-    name: "Servicio Tecnico",
-    path: "/about",
+    label: "Servicio Tecnico",
+    key: "service",
   },
-  { name: "Productos", path: "/about" },
+  { label: "Productos", key: "products" },
 ];
-
 // const iconClasses =
-//   "h-6 w-6 text-slate-950 rounded-lg dark:text-amber-50 sm:block";
+// "h-6 w-6 text-slate-950 rounded-lg dark:text-amber-50 sm:block";
 const menuItemClasses =
-  "m-0.5 flex items-center rounded-lg text-slate-900 hover:bg-sky-700 p-2 text-xl hover:cursor-pointer min-h-[43px]";
+  "m-0.5 flex items-center   p-2 text-xl hover:cursor-pointer min-h-[43px] ";
 
 const isDropdownOpen = ref(false);
 </script>
 <template>
   <div
-    class="fixed top-0 left-0 w-full z-50 bg-zinc-800 shadow-md p-2 flex h-15 items-center"
+    class="top-0 left-0 w-full z-50 bg-zinc-500 shadow-md p-2 flex h-15 items-center justify-around"
   >
-    <div class="flex items-center">
-      <div
-        v-for="option in optionsMenu"
-        :key="option.name"
-        :class="menuItemClasses + ' hidden sm:flex'"
-      >
-        <p class="hidden pl-1 text-white sm:block">
-          {{ option.name }}
-        </p>
+    <div class="flex items-center ml-4">
+      <img :src="tsi2" alt="Logo" class="h-10 w-auto" />
+    </div>
+    <div class="flex items-center space-x-5 mr-4">
+      <div class="hidden sm:flex space-x-5">
+        <div
+          v-for="option in optionsMenu"
+          :key="option.label"
+          :class="menuItemClasses"
+        >
+          <p class="pl-1 text-white hover:text-indigo-600">
+            {{ option.label }}
+          </p>
+        </div>
       </div>
       <div class="flex sm:hidden">
-        <div class="relative inline-block">
-          <button @click="isDropdownOpen = !isDropdownOpen" class="rounded p-2">
+        <n-dropdown :options="optionsMenu" placement="b"
+          ><button
+            @click="isDropdownOpen = !isDropdownOpen"
+            class="rounded p-2"
+          >
             <i-mdi-dots-vertical />
           </button>
-          <div
-            v-if="isDropdownOpen"
-            class="absolute left-0 z-10 mt-1 w-full min-w-max rounded-lg border"
-          >
-            <div
-              v-for="option in optionsMenu"
-              :key="option.name"
-              class="flex cursor-pointer rounded-lg bg-slate-100 px-4 py-2 text-base text-gray-800 hover:bg-slate-200 dark:bg-slate-800 hover:dark:bg-gray-700"
-            >
-              <p class="pl-1 text-slate-950 dark:text-amber-50">
-                {{ option.name }}
-              </p>
-            </div>
-          </div>
-        </div>
+        </n-dropdown>
       </div>
     </div>
   </div>

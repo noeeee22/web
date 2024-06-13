@@ -1,5 +1,5 @@
 <script setup>
-import img1 from "../assets/1.jpg";
+import sist from "../assets/sist.jpg";
 </script>
 <template>
   <div
@@ -20,8 +20,8 @@ import img1 from "../assets/1.jpg";
     </div>
     <div class="md:w-1/2 lg:w-1/3">
       <img
-        class="w-full h-auto rounded-lg shadow-lg"
-        :src="img1"
+        class="w-full h-auto rounded-lg"
+        :src="sist"
         alt="Imagen representativa"
       />
     </div>
