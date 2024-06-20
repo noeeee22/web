@@ -1,6 +1,12 @@
+<script setup>
+import tsi from "../assets/tsi.png";
+</script>
 <template>
-  <div class="bg-neutral-500 h-80 text-white text-base">
-    <div class="flex flex-row p-10 gap-10 justify-around">
+  <div class="bg-sky-700 h-60 text-white text-base">
+    <div class="flex flex-row p-10 gap-10 justify-evenly">
+      <div>
+        <img :src="tsi" alt="" class="h-20" />
+      </div>
       <div class="flex flex-col">
         <h4 class="font-bold text-lg mb-3">Contacto</h4>
         <p>Dirección: Calle Falsa 123, Ciudad, País</p>
@@ -10,8 +16,8 @@
       <div class="flex flex-col">
         <h4 class="font-bold text-lg mb-3">Enlaces</h4>
         <a href="/">Inicio</a>
-        <a href="/productos">Productos</a>
-        <a href="/servicios">Servicios</a>
+        <a href="/">Productos</a>
+        <a href="/">Servicios</a>
       </div>
       <div>
         <h4 class="font-bold text-lg mb-3">Redes</h4>

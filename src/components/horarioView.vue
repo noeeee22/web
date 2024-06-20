@@ -4,7 +4,7 @@ const hours = "text-neutral-500 text-lg flex flex-row";
 const caption = "text-xl font-bold";
 </script>
 <template>
-  <div class="flex justify-center items-center">
+  <div class="flex justify-center items-center" id="tetas">
     <div class="flex flex-col gap-1 p-10">
       <div class="">
         <h1 :class="caption">Contactenos</h1>

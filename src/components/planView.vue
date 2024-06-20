@@ -1,16 +1,13 @@
 <script setup>
 const props = defineProps({
   titulo: String,
-  descripcion: String,
   precio: String,
+  descripcion: String,
 });
 
-const divPlanesClases =
-  "max-w-sm bg-white border border-gray-200 rounded-lg shadow m-2 p-2 bg-sky-100 border-none";
-const textPlanClasses = "m-2 text-center mb-4 mt-5";
-const planesClases = "flex items-center gap-2 mb-3 h-7 ";
+const planesClases = "flex items-center h-7 ";
 const buttonPClasses =
-  "cursor-pointer transition-all w-full bg-sky-800 text-white px-6 py-2 rounded-lg border-sky-700  hover:brightness-110   active:brightness-90 rounded-3xl";
+  "cursor-pointer transition-all w-full bg-sky-500 text-white px-6 py-2 my-3 mx-3 rounded-3xl border-sky-700 hover:brightness-110 active:brightness-90 ";
 
 const PlanesCard = [
   {
@@ -59,16 +56,21 @@ const PlanesCard = [
 </script>
 
 <template>
-  <div class="flex justify-center bg-">
-    <div :class="divPlanesClases">
-      <div :class="textPlanClasses">
-        <h2 class="font-bold text-2xl mb-2">{{ titulo }}</h2>
-        <p>{{ descripcion }}</p>
+  <div class="flex justify-center">
+    <div class="max-w-sm border rounded-3xl shadow-xl">
+      <div class="text-center">
+        <h2 class="font-medium text-xl my-3">{{ titulo }}</h2>
+        <p class="text-4xl my-1 font-bold text-sky-950">
+          {{ precio }}
+        </p>
+        <span class="text-sky-950 font-medium text-lg">Mensual</span>
+        <h1 class="max-w-sm flex justify-center text-center mx-6 my-4">
+          {{ descripcion }}
+        </h1>
       </div>
-      <h1 class="text-3xl text-center mb-4">{{ precio }}</h1>
       <div class="flex" v-for="data in PlanesCard" :key="data.id">
-        <div class="flex gap-2 mx-5">
-          <component :is="data.icon"></component>
+        <div class="flex gap-3 mx-5 items-center my-1">
+          <component :is="data.icon" class=""></component>
           <li :class="planesClases">{{ data.nombre }}</li>
         </div>
       </div>
@@ -76,6 +78,5 @@ const PlanesCard = [
         <button :class="buttonPClasses">Seleccionar</button>
       </div>
     </div>
-    <!-- class="m-5 p-7" -->
   </div>
 </template>

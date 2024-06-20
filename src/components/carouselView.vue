@@ -7,7 +7,7 @@ import img5 from "../assets/5.jpg";
 
 <template>
   <div class="carousel-container">
-    <n-carousel draggable>
+    <n-carousel draggable autoplay="">
       <div>
         <div class="carousel-text">
           <h1>TSI</h1>

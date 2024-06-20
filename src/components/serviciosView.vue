@@ -1,6 +1,6 @@
 <script setup>
 const cardService =
-  "ease-in-out duration-300 hover:shadow-lg hover:shadow-lg transform hover:-translate-y-1 hover:scale-110 rounded-lg bg-zinc-300 p-8 w-64 h-72 text-center flex flex-col items-center justify-center";
+  "ease-in-out duration-300 hover:shadow-lg transform hover:-translate-y-1 hover:scale-110 rounded-3xl bg-zinc-300 p-6 w-64 h-62 text-center flex flex-col items-center justify-center";
 const styleIcon = "p-3 m-1 rounded-lg mb-4";
 </script>
 <template>
@@ -13,7 +13,7 @@ const styleIcon = "p-3 m-1 rounded-lg mb-4";
           <div :class="styleIcon">
             <i-ic-twotone-install-desktop class="size-10" />
           </div>
-          <h1 class="font-bold text-lg mb-2">Facturación Electrónica</h1>
+          <h1 class="font-bold text-lg">Facturación Electrónica</h1>
           <p class="flex-grow">
             Conoce nuestros diversos Sistemas de Facturación
           </p>
