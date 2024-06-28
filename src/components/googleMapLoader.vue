@@ -1,8 +1,12 @@
 <script setup>
 import { GoogleMap, Marker } from "vue3-google-map";
 
-const center = { lat: 40.689247, lng: -74.044502 };
-const markerOptions = { position: center, label: "L", title: "LADY LIBERTY" };
+const center = { lat: -6.03416, lng: -76.97168 };
+const markerOptions = {
+  position: center,
+  label: "T",
+  title: "TECNOLOGIAS PARA SOLUCIONES INTELIGENTES",
+};
 </script>
 
 <template>

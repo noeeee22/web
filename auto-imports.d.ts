@@ -6,6 +6,7 @@
 export {}
 declare global {
   const IconEmojioneDesktopComputer: typeof import('~icons/emojione/desktop-computer')['default']
+  const IconIcBaselineWhatsapp: typeof import('~icons/ic/baseline-whatsapp')['default']
   const IconIconParkOutlineDuck: typeof import('~icons/icon-park-outline/duck')['default']
   const IconJamComputerF: typeof import('~icons/jam/computer-f')['default']
   const IconLucideBird: typeof import('~icons/lucide/bird')['default']
@@ -20,6 +21,7 @@ declare global {
   const IconMaterialSymbolsHomeRounded: typeof import('~icons/material-symbols/home-rounded')['default']
   const IconMaterialSymbolsInfo: typeof import('~icons/material-symbols/info')['default']
   const IconMaterialSymbolsLightSettingsRounded: typeof import('~icons/material-symbols-light/settings-rounded')['default']
+  const IconMaterialSymbolsWorkspacePremiumRounded: typeof import('~icons/material-symbols/workspace-premium-rounded')['default']
   const IconMdiPiggyBankOutline: typeof import('~icons/mdi/piggy-bank-outline')['default']
   const IconMdiTurtle: typeof import('~icons/mdi/turtle')['default']
   const IconMingcuteToyHorseLine: typeof import('~icons/mingcute/toy-horse-line')['default']

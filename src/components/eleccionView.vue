@@ -22,7 +22,7 @@ const styleIcon =
         class="w-80 h-54 absolute inset-0 object-cover rounded-lg"
       /> -->
       <div
-        class="absolute inset-0 bg-sky-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-500 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Soporte Técnico Especializado
@@ -43,7 +43,7 @@ const styleIcon =
         <span class="font-medium">Innovación y Tecnología</span>
       </div>
       <div
-        class="absolute inset-0 bg-sky-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Innovación y Tecnología
@@ -56,14 +56,14 @@ const styleIcon =
       </div>
     </div>
     <div
-      class="relative w-80 h-64 text-white bg-sky-100 rounded-3xl text-opacity-0 hover:text-opacity-100 text-lg transition-all items-center"
+      class="relative w-80 h-64 text-white bg-azulblue-10 rounded-3xl text-opacity-0 hover:text-opacity-100 text-lg transition-all items-center"
     >
       <div :class="styleIcon">
         <i-material-symbols-dashboard-customize-rounded class="size-20" />
         <span class="font-medium"> Soluciones Personalizadas</span>
       </div>
       <div
-        class="absolute inset-0 bg-sky-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Soluciones Personalizadas
@@ -83,7 +83,7 @@ const styleIcon =
         <span class="font-medium"> Experiencia y Confianza</span>
       </div>
       <div
-        class="absolute inset-0 bg-sky-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Experiencia y Confianza
@@ -103,7 +103,7 @@ const styleIcon =
         <span class="font-medium"> Calidad Garantizada</span>
       </div>
       <div
-        class="absolute inset-0 bg-sky-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Calidad Garantizada
@@ -123,7 +123,7 @@ const styleIcon =
         <span class="font-medium"> Atención al Cliente Excepcional</span>
       </div>
       <div
-        class="absolute inset-0 bg-sky-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Atención al Cliente Excepcional

@@ -28,6 +28,7 @@ declare module 'vue' {
     IFluentHandshake24Filled: typeof import('~icons/fluent/handshake24-filled')['default']
     IIcBaselineAlarm: typeof import('~icons/ic/baseline-alarm')['default']
     IIcBaselineMiscellaneousServices: typeof import('~icons/ic/baseline-miscellaneous-services')['default']
+    IIcBaselineWhatsapp: typeof import('~icons/ic/baseline-whatsapp')['default']
     IIconParkOutlineDownloadComputer: typeof import('~icons/icon-park-outline/download-computer')['default']
     IIcTwotoneInstallDesktop: typeof import('~icons/ic/twotone-install-desktop')['default']
     IIonDesktop: typeof import('~icons/ion/desktop')['default']

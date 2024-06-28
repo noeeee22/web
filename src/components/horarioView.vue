@@ -5,7 +5,7 @@ const caption = "text-xl font-bold";
 </script>
 <template>
   <div class="flex justify-center items-center" id="tetas">
-    <div class="flex flex-col gap-1 p-10">
+    <div class="flex flex-col gap-1 m-10">
       <div class="">
         <h1 :class="caption">Contactenos</h1>
         <span :class="spans"><i-ph-envelope-light />correo@gmail.com</span>

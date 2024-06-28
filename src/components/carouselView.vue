@@ -35,7 +35,7 @@ import img5 from "../assets/5.jpg";
 <style scoped>
 .carousel-img {
   width: 100%;
-  height: 900px;
+  height: 800px;
   object-fit: cover;
 }
 
@@ -53,7 +53,7 @@ import img5 from "../assets/5.jpg";
 .carousel-container {
   position: relative;
   width: 100%;
-  height: 900px;
+  height: 800px;
 }
 
 .carousel-text {

@@ -7,9 +7,9 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
 </script>
 
 <template>
-  <div class="m-3 space-y-10">
+  <div class="m-3 space-y-10 md:px-20 px-0">
     <div
-      class="md:flex justify-center gap-10 md:mx-40 bg-sky-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
+      class="md:flex justify-center gap-10 bg-sky-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
     >
       <div class="flex justify-center md:justify-start mb-5 md:mb-0">
         <img :src="zenda" class="rounded-3xl md:h-80 shadow-lg" alt="Zenda" />
@@ -34,8 +34,15 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
     </div>
 
     <div
-      class="md:flex justify-center gap-10 md:mx-40 bg-indigo-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
+      class="md:flex justify-center gap-10 bg-indigo-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg flex-row-reverse"
     >
+      <div class="flex justify-center md:justify-start mb-5 md:mb-0">
+        <img
+          :src="zendapharma"
+          class="rounded-3xl md:h-80 shadow-lg"
+          alt="Zendapharma"
+        />
+      </div>
       <div
         class="text-center md:text-left flex flex-col items-center md:items-start max-w-md mx-auto md:mx-0"
       >
@@ -53,17 +60,10 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
           </button>
         </div>
       </div>
-      <div class="flex justify-center md:justify-start mb-5 md:mb-0">
-        <img
-          :src="zendapharma"
-          class="rounded-3xl md:h-80 shadow-lg"
-          alt="Zendapharma"
-        />
-      </div>
     </div>
 
     <div
-      class="md:flex justify-center gap-10 md:mx-40 bg-orange-50 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
+      class="md:flex justify-center gap-10 bg-orange-50 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
     >
       <div class="flex justify-center md:justify-start mb-5 md:mb-0">
         <img :src="flizzy" class="rounded-3xl md:h-80 shadow-lg" alt="Flizzy" />
@@ -88,8 +88,15 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
     </div>
 
     <div
-      class="md:flex justify-center gap-10 md:mx-40 bg-yellow-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
+      class="md:flex justify-center gap-10 bg-yellow-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg flex-row-reverse"
     >
+      <div class="flex justify-center md:justify-start mb-5 md:mb-0">
+        <img
+          :src="zendatours"
+          class="rounded-3xl md:h-80 shadow-lg"
+          alt="Zendatours"
+        />
+      </div>
       <div
         class="text-center md:text-left flex flex-col items-center md:items-start max-w-md mx-auto md:mx-0"
       >
@@ -107,22 +114,15 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
           </button>
         </div>
       </div>
-      <div class="flex justify-center md:justify-start mb-5 md:mb-0">
-        <img
-          :src="zendatours"
-          class="rounded-3xl md:h-80 shadow-lg"
-          alt="Zendatours"
-        />
-      </div>
     </div>
 
     <div
-      class="md:flex justify-center gap-10 md:mx-40 bg-green-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
+      class="md:flex justify-center gap-10 bg-green-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
     >
       <div class="flex justify-center md:justify-start mb-5 md:mb-0">
         <img
           :src="laboratorioClinico"
-          class="rounded-3xl md:h-80 shadow-lg"
+          class="rounded-3xl lg:h-80 md:h-80 shadow-lg"
           alt="Laboratorio Clinico"
         />
       </div>

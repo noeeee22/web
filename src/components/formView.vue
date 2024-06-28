@@ -56,7 +56,7 @@
         </div>
         <div class="flex justify-center">
           <button
-            class="text-white bg-sky-500 px-4 py-2 font-bold rounded-3xl hover:bg-sky-600 w-full"
+            class="text-white bg-azulblue-400 px-4 py-2 font-bold rounded-3xl hover:bg-azulblue-600 w-full"
             type="submit"
           >
             Enviar Datos
