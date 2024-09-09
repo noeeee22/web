@@ -6,7 +6,9 @@ const handleClick = (option) => {
   if (option.command) {
     window.location.href = option.command;
   } else if (option.key === "whatsapp") {
-    window.open("https://wa.me/+51998407723", "_blank"); // Replace with your WhatsApp number
+    window.open("https://wa.me/+51998407723", "_blank"); //WhatsApp
+  } else if (option.key === "login") {
+    window.location.href = "/login"; // login
   } else {
     console.log("No command provided");
   }
@@ -41,6 +43,10 @@ const optionsMenu = [
   {
     label: "WhatsApp",
     key: "whatsapp",
+  },
+  {
+    label: "",
+    key: "login",
   },
 ];
 
@@ -78,6 +84,12 @@ const isDropdownOpen = ref(false);
             <i-ic-baseline-whatsapp
               class="w-8 h-8 text-green-500 hover:text-green-700 transition duration-300"
             ></i-ic-baseline-whatsapp>
+          </template>
+
+          <template v-if="option.key === 'login'">
+            <i-material-symbols-light-person
+              class="w-9 h-9 text-rose-400 hover:text-rose-700 transition duration-300"
+            ></i-material-symbols-light-person>
           </template>
         </div>
       </div>

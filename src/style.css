@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* para la fuentes*/
+@font-face{
+ font-family: 'Tahoma';
+ src: url('@/assets/Tahoma.woff') format('woff'), url('@/assets/TahomaRegular.ttf') format('trutype')
+}
+
+.html, body{
+    font: inherit;
+    font-size: 100%;
+    font-family: 'Tahoma', Arial, serif;
+    font-weight: normal;
+}
+
+.cuadrito{
+    @apply relative w-80 h-64 text-white bg-gray-200 rounded-3xl text-opacity-0 hover:text-opacity-100 text-lg transition-all items-center
+}
+
+.hoverrEleccion{
+    @apply absolute inset-0 bg-gray-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl
+}

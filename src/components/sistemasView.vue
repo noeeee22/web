@@ -7,7 +7,7 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
 </script>
 
 <template>
-  <div class="m-3 space-y-10 md:px-20 px-0">
+  <div class="m-3 space-y-10 md:px-20 px-3 flex-wrap mx-10">
     <div
       class="md:flex justify-center gap-10 bg-sky-100 bg-opacity-80 rounded-3xl items-center p-5 md:p-7 shadow-lg"
     >
@@ -19,17 +19,10 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
       >
         <h1 class="font-bold text-3xl mb-4 text-sky-500">Zenda</h1>
         <p class="text-lg">
-          Podrás pedir ayuda en tiempo real, formarte con los tutoriales de
-          nuestra academia y asesorarte con nuestros expertos.
+          Un sistema para el servicio total de facturación y ventas para
+          diversos tipos de comercios, mejorando procesos como inventarios,
+          ventas y atención al cliente.
         </p>
-        <div class="mt-5 w-60">
-          <button
-            class="text-white bg-sky-500 px-4 py-2 font-bold rounded-3xl hover:bg-sky-600 w-full"
-            type="button"
-          >
-            Conocer más
-          </button>
-        </div>
       </div>
     </div>
 
@@ -48,17 +41,10 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
       >
         <h1 class="font-bold text-3xl mb-4 text-indigo-500">Zendapharma</h1>
         <p class="text-lg">
-          Podrás pedir ayuda en tiempo real, formarte con los tutoriales de
-          nuestra academia y asesorarte con nuestros expertos.
+          Esta creado especialmente para farmacias, este sistema ayuda a
+          administrar el stock de medicamentos, las ventas, el control de
+          prescripciones y las relaciones con proveedores.
         </p>
-        <div class="mt-5 w-60">
-          <button
-            class="text-white bg-indigo-500 px-4 py-2 font-bold rounded-3xl hover:bg-indigo-600 w-full"
-            type="button"
-          >
-            Conocer más
-          </button>
-        </div>
       </div>
     </div>
 
@@ -73,17 +59,9 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
       >
         <h1 class="font-bold text-3xl mb-4 text-orange-500">Flizzy</h1>
         <p class="text-lg">
-          Podrás pedir ayuda en tiempo real, formarte con los tutoriales de
-          nuestra academia y asesorarte con nuestros expertos.
+          Es un sistema de facturación dirigida a restaurantes dando un servicio
+          adecuado para pedidos, mesas y pagos
         </p>
-        <div class="mt-5 w-60">
-          <button
-            class="text-white bg-orange-500 px-4 py-2 font-bold rounded-3xl hover:bg-orange-600 w-full"
-            type="button"
-          >
-            Conocer más
-          </button>
-        </div>
       </div>
     </div>
 
@@ -102,17 +80,9 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
       >
         <h1 class="font-bold text-3xl mb-4 text-yellow-500">Zendatours</h1>
         <p class="text-lg">
-          Podrás pedir ayuda en tiempo real, formarte con los tutoriales de
-          nuestra academia y asesorarte con nuestros expertos.
+          Sistema orientado a agencias de transportes, que facilita el control
+          emisión de boletas y facturas electrónicas
         </p>
-        <div class="mt-5 w-60">
-          <button
-            class="text-white bg-yellow-500 px-4 py-2 font-bold rounded-3xl hover:bg-yellow-600 w-full"
-            type="button"
-          >
-            Conocer más
-          </button>
-        </div>
       </div>
     </div>
 
@@ -133,17 +103,19 @@ import laboratorioClinico from "../assets/laboratorioClinico.png";
           Sistema de Laboratorio Clínico
         </h1>
         <p class="text-lg">
-          Podrás pedir ayuda en tiempo real, formarte con los tutoriales de
-          nuestra academia y asesorarte con nuestros expertos.
+          Un software hecho para laboratorios clínicos, con funciones dedicada a
+          administrar la entrada de muestras, análisis, generación de informes y
+          facturación, mejorando la atención a pacientes y el control de
+          resultados.
         </p>
-        <div class="mt-5 w-60">
+        <!-- <div class="mt-5 w-60">
           <button
             class="text-white bg-green-500 px-4 py-2 font-bold rounded-3xl hover:bg-green-600 w-full"
             type="button"
           >
             Conocer más
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

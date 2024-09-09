@@ -9,13 +9,15 @@ import sist from "../assets/sist.jpg";
       <h3 class="text-lg font-semibold text-azulblue-200 mb-2">
         Especializados en Sistemas de Facturación
       </h3>
-      <h1 class="text-3xl font-bold mb-4">
-        Soluciones a la medida para tu negocio en Moyobamba
+      <h1 class="text-4xl font-bold mb-4">
+        Soluciones a la medida para tu negocio
       </h1>
-      <p class="text-gray-700 mb-4 text-base">
+      <!-- todo el peru - SAn Martin y las demas regiones -->
+      <p class="text-gray-700 mb-4 text-lg">
         TSI ofrece sistemas de facturación especializados para diversos
-        comercios como restaurantes, librerías y farmacias en Moyobamba. Además,
-        ofrecemos equipos de escritorio de alta calidad.
+        comercios como restaurantes, librerías y farmacias en San Martín y las
+        demás regiones del país. Además, ofrecemos equipos de escritorio de
+        calidad para tu negocio.
       </p>
     </div>
     <div class="md:w-1/2 lg:w-1/3">

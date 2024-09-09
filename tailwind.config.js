@@ -8,8 +8,9 @@ export default {
     extend: {
       colors: {
         azulblue: {
-          10: '#e6f3fa',
+          10: '#e4f1f8',
           20: '#d9edf8',
+          30: '#afd5eb',
           80: '#6cb1da',
           90: '#5faad7',
           100: '#1C87C6',

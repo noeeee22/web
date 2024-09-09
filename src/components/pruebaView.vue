@@ -1,13 +1,16 @@
-<script setup></script>
+<script setup>
+import tecnico from "../assets/serviciot.png";
+import facturacion from "../assets/facturacion.png";
+import productoss from "../assets/producctoss.png";
+</script>
 
 <template>
+  <!-- este archivo es servicios -->
   <div>
-    <div
-      class="flex gap-10 md:gap-x-60 items-center justify-center flex-wrap my-1"
-    >
+    <div class="flex gap-10 items-center justify-center flex-wrap my-1">
       <div class="w-60">
         <div class="p-2 m-1 flex justify-center">
-          <i-ic-twotone-install-desktop class="size-10 text-black" />
+          <img :src="facturacion" alt="" class="size-11" />
         </div>
         <div class="text-center items-center">
           <h1 class="font-bold text-lg text-center">Facturación Electrónica</h1>
@@ -18,7 +21,8 @@
       </div>
       <div class="w-60">
         <div class="p-2 m-1 flex justify-center">
-          <i-ic-baseline-miscellaneous-services class="size-10 text-black" />
+          <img :src="tecnico" alt="" class="size-11" />
+          <!-- <i-ic-baseline-miscellaneous-services class="size-10 text-black" /> -->
         </div>
         <div class="text-center items-center">
           <h1 class="font-bold text-lg text-center">Servicio Técnico</h1>
@@ -29,7 +33,8 @@
       </div>
       <div class="w-60">
         <div class="p-2 m-1 flex justify-center">
-          <i-ph-desktop-tower-duotone class="size-10 text-black" />
+          <img :src="productoss" alt="" class="size-12" />
+          <!-- <i-ph-desktop-tower-duotone class="size-10 text-black" /> -->
         </div>
         <div class="text-center items-center">
           <h1 class="font-bold text-lg text-center">Productos</h1>
