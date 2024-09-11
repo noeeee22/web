@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import NavView from "@/components/NavView.vue";
 import FooterView from "@/components/footerView.vue";
+import Button from "primevue/button";
 
 const isChatOpen = ref(false);
 
@@ -121,6 +122,7 @@ const toggleChat = () => {
           </div>
         </div>
       </div>
+      <Button label="tetas" />
       <div class="">
         <FooterView />
       </div>

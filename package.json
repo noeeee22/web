@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@primevue/themes": "^4.0.7",
     "@vueuse/core": "^10.9.0",
     "iconify": "^1.4.0",
     "pinia": "^2.1.7",
+    "primevue": "^4.0.7",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-icons": "^0.18.5",
     "unplugin-vue-components": "^0.26.0",

@@ -1,6 +1,4 @@
-<script setup>
-import PrincipalViewVue from "./hooks/Principal.vue";
-</script>
+<script setup></script>
 
 <template>
   <div class="h-auto w-auto">

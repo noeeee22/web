@@ -12,7 +12,7 @@ import productoss from "../assets/producctoss.png";
         <div class="p-2 m-1 flex justify-center">
           <img :src="facturacion" alt="" class="size-11" />
         </div>
-        <div class="text-center items-center">
+        <div class="text-center items-center bg-white p-4 rounded-3xl">
           <h1 class="font-bold text-lg text-center">Facturación Electrónica</h1>
           <span class="flex-grow text-center text-base"
             >Soluciones de facturación digital</span
