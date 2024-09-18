@@ -1,6 +1,18 @@
 <script setup>
 import { ref } from "vue";
-import NavView from "@/components/hp/menubar.vue";
+import navbar from "@/components/layout/menu/navbar.vue";
+import sidebar from "@/components/layout/menu/sidebar.vue";
+import panel from "@/components/layout/panel/panel.vue";
+import listatickets from "@/components/modules/tickets/listatickets.vue";
+import prueba2 from "@/components/modules/tickets/prueba2.vue";
 </script>
 
-<template></template>
+<template>
+  <div class="h-full w-full">
+    <navbar />
+    <!-- <sidebar /> -->
+    <panel />
+    <listatickets />
+    <prueba2 />
+  </div>
+</template>

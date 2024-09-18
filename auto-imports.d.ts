@@ -6,6 +6,7 @@
 export {}
 declare global {
   const IconEmojioneDesktopComputer: typeof import('~icons/emojione/desktop-computer')['default']
+  const IconFluentAnimalCat20Regular: typeof import('~icons/fluent/animal-cat20-regular')['default']
   const IconIcBaselineWhatsapp: typeof import('~icons/ic/baseline-whatsapp')['default']
   const IconIconParkOutlineDuck: typeof import('~icons/icon-park-outline/duck')['default']
   const IconJamComputerF: typeof import('~icons/jam/computer-f')['default']
@@ -30,5 +31,7 @@ declare global {
   const IconPhCpuBold: typeof import('~icons/ph/cpu-bold')['default']
   const IconPhHandHeartFill: typeof import('~icons/ph/hand-heart-fill')['default']
   const IconRiComputerFill: typeof import('~icons/ri/computer-fill')['default']
+  const IconSolarLockPasswordBold: typeof import('~icons/solar/lock-password-bold')['default']
   const IconTdesignSystemCode: typeof import('~icons/tdesign/system-code')['default']
+  const NIcon: typeof import('naive-ui')['NIcon']
 }

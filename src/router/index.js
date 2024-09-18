@@ -16,7 +16,7 @@ const router = createRouter({
         {
             path: '/help-desk',
             name: 'help-desk',
-            component: () => import('../components/hp/menubar.vue')
+            component: () => import('../hooks/principalhp.vue')
         },
     ]
 })
