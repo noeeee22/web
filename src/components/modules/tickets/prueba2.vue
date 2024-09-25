@@ -1,6 +1,8 @@
 <script setup>
 import "primeicons/primeicons.css";
+import { defineProps } from 'vue';
 import Avatar from "primevue/avatar";
+import miau from "@/assets/miau.jpg";
 import Tag from 'primevue/tag';
 
 
@@ -14,19 +16,34 @@ const props = defineProps({
 const PlanesCard = [
     {
         icon: "pi pi-book",
-        title: "CHERRY CHERRY LADY",
+        nombre: "Jade Ines",
+        lastname: "Santos Rosa",
+        title: "Nuevo diseño de formularios",
+        img: miau,
+        state: "success",
+        contend: "Baja",
         subtitle: "Tickets que requieren atención",
         number: 10,
     },
     {
         icon: "pi pi-pencil",
-        title: "CHERRY CHERRY LADY",
+        nombre: "Noah ",
+        lastname: "Flores del Campo",
+        title: "Endpoints de falabela",
+        img: miau,
+        state: "danger",
+        contend: "Alta",
         subtitle: "Tickets en desarrollo",
         number: 67,
     },
     {
         icon: "pi pi-check-circle",
-        title: "TUTUTUTUTUTUTUTUTUT",
+        nombre: "Marco Polo",
+        lastname: "Diaz Muñoz",
+        title: "Web de falabela",
+        img: miau,
+        state: "info",
+        contend: "Media",
         subtitle: "Fecjsdsj 12323 565 ",
         number: 156,
     },
@@ -41,19 +58,18 @@ const PlanesCard = [
                 <div class="h-48 w-full flex flex-col justify-between relative rounded-lg shadow-md gap-2 p-5"
                     style="background-color: rgba(255, 255, 255, 0.8);">
                     <div class="flex">
-                        <Avatar
-                            image="https://img.freepik.com/vector-premium/dulce-felino-icono-gato-dibujos-animados-kawaii-rosa-colores-saturados-acentos-blanco-ambar-ani_801298-60.jpg"
-                            shape="circle" class="mr-2" size="large" />
+                        <img :src="plan.img" alt="Avatar" class="mr-2 w-16 h-16 rounded-full" />
+
                         <div class="flex flex-col">
-                            <span>Nombre</span>
-                            <span>nombrecito</span>
-                            <Tag severity="danger" value="Danger" class="w-16"></Tag>
+                            <span>{{ plan.nombre }}</span>
+                            <span>{{ plan.lastname }}</span>
+                            <Tag :severity="plan.state" :value="plan.contend" class="w-16"></Tag>
                         </div>
                     </div>
                     <div class="flex flex-col items-end justify-end">
                         <span class="font-bold text-md ">{{ plan.title }}</span>
 
-                        <p class="text-sm justify-center">{{ plan.subtitle }}</p>
+                        <span class="text-sm justify-center">{{ plan.subtitle }}</span>
                     </div>
                 </div>
             </div>

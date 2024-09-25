@@ -16,14 +16,14 @@ const props = defineProps({
 
 const PlanesCard = [
   {
-    icon: "pi pi-book",
+    icon: "pi pi-hourglass",
     title: "PENDIENTE",
     subtitle: "Tickets que requieren atención",
     number: 10,
     img: moradito,
   },
   {
-    icon: "pi pi-pencil",
+    icon: "pi pi-sync",
     title: "EN PROCESO",
     subtitle: "Tickets en desarrollo",
     number: 67,
@@ -54,9 +54,9 @@ const PlanesCard = [
           style="background-color: rgba(255, 255, 255, 0.8);">
           <div class="flex items-center">
             <i :class="`mr-2 ${plan.icon}`" style="font-size: 1.5rem" />
-            <span class="font-bold text-xl ">{{ plan.title }}</span>
+            <span class="font-bold text-xl">{{ plan.title }}</span>
           </div>
-          <p class="text-base justify-center">{{ plan.subtitle }}</p>
+          <p class="text-base justify-center text-gray-800">{{ plan.subtitle }}</p>
 
           <span class="text-gray-800 flex justify-end items-start font-semibold text-3xl z-10">{{ plan.number }}</span>
           <img :src="plan.img" alt="tetas"

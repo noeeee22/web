@@ -22,3 +22,4 @@
 .hoverrEleccion{
     @apply absolute inset-0 bg-gray-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl
 }
+
