@@ -1,10 +1,10 @@
 <script setup>
-import calidad from "../../assets/calidad.png";
-import atencion from "../../assets/atencion.png";
-import tecnologia from "../../assets/tecnologia.png";
-import experiencia from "../../assets/experiencia.png";
-import soporte from "../../assets/soporte.png";
-import soluciones from "../../assets/soluciones.png";
+import calidad from "@/assets/calidad.png";
+import atencion from "@/assets/atencion.png";
+import tecnologia from "@/assets/tecnologia.png";
+import experiencia from "@/assets/experiencia.png";
+import soporte from "@/assets/soporte.png";
+import soluciones from "@/assets/soluciones.png";
 
 const styleIcon =
   "w-80 h-64 absolute inset-0 object-cover rounded-lg text-black flex justify-center items-center flex-col gap-5";

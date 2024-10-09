@@ -1,7 +1,7 @@
 <script setup>
-import tecnico from "../assets/serviciot.png";
-import facturacion from "../assets/facturacion.png";
-import productoss from "../assets/producctoss.png";
+import tecnico from "@/assets/serviciot.png";
+import facturacion from "@/assets/facturacion.png";
+import productoss from "@/assets/producctoss.png";
 </script>
 
 <template>

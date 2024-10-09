@@ -1,55 +1,39 @@
 <script setup>
-import { ref } from "vue";
+import { ref, nextTick } from "vue";
 import Menubar from "primevue/menubar";
-import Badge from "primevue/badge";
 import Avatar from "primevue/avatar";
-import IconField from "primevue/iconfield";
-import InputIcon from "primevue/inputicon";
-import InputText from "primevue/inputtext";
 import logo from "@/assets/tsi2.png";
 import 'primeicons/primeicons.css'
 import Button from 'primevue/button';
-import miau from "@/assets/miau.jpg";
 import Dialog from 'primevue/dialog';
 import ConfirmDialog from 'primevue/confirmdialog';
 import { useConfirm } from "primevue/useconfirm";
 import { useToast } from "primevue/usetoast";
 import Popover from 'primevue/popover';
+import { useRouter } from 'vue-router';
+import panel from "../panel/panel.vue";
+
 
 const confirm = useConfirm();
 const toast = useToast();
+const router = useRouter();
 
-// Definir íconos con el nombre de la clase
 const items = ref([
   {
-    label: "Home",
-    key: "home",
-    icon: "pi pi-home",
-  },
-  {
-    label: "Tikets",
-    key: "tikets",
+    label: "Tickets",
     icon: "pi pi-ticket",
+    command: ()=>{
+      router.push({ name: 'dataTable' });
+    }
   },
-  {
+    {
     label: "Usuarios",
-    key: "users",
     icon: "pi pi-users",
+    command: ()=>{
+      router.push({ name: 'tableUsers' });
+    }
   },
 ]);
-
-
-const itemsEnd = ref([
-  {
-    label: 'Ajustes de Cuenta',
-    icon: 'pi pi-file',
-  },
-  {
-    label: 'Cerrar Sesion ',
-    icon: 'pi pi-folder-open'
-  }
-]);
-
 
 const position = ref('center');
 const visible = ref(false);
@@ -109,29 +93,54 @@ const confirm2 = () => {
 
 //notificacionesd
 const op = ref();
-const members = ref([
-  { name: 'Amy Elsner', image: 'amyelsner.png', email: 'amy@email.com', role: 'Owner' },
-  { name: 'Bernardo Dominic', image: 'bernardodominic.png', email: 'bernardo@email.com', role: 'Editor' },
-  { name: 'Ioni Bowcher', image: 'ionibowcher.png', email: 'ioni@email.com', role: 'Viewer' }
-]);
 
 const toggle = (event) => {
   op.value.toggle(event);
 }
+
+const showInput = ref(false);
+const searchQuery = ref('');
+
+const toggleInput = () => {
+  showInput.value = !showInput.value;
+  if (showInput.value) {
+    nextTick(() => {
+      document.querySelector('input')?.focus();
+    });
+  }
+};
+
+const startSearch = () => {
+  console.log("Iniciar búsqueda con: ", searchQuery.value);
+  // Aquí iría la lógica de búsqueda
+};
 </script>
 
 <template>
-  <div class="card">
+  <div class="card top-0 left-0 w-full z-50 justify-between md:justify-evenly flex-row-reverse md:flex-row">
     <Menubar :model="items">
       <template #start>
-        <img :src="logo" alt="Logo" class="w-20 mr-3" />
+        <a href="panel">
+          <img :src="logo" alt="Logo" class="md:w-20 mr-3 w-20" />
+        </a>
       </template>
 
-      <template #item="{ item, props }">
-        <a class="flex items-center" v-bind="props.action">
+      <template #item="{ item, props, hasSubmenu }">
+        <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+          <a v-ripple :href="href" v-bind="props.action" @click="navigate">
+            <span :class="item.icon" />
+            <span class="ml-2">{{ item.label }}</span>
+          </a>
+        </router-link>
+        <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
+          <span :class="item.icon" />
+          <span class="ml-2">{{ item.label }}</span>
+          <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down ml-2" />
+        </a>
+        <!-- <a class="flex items-center" v-bind="props.action">
           <span :class="item.icon"></span>
           <span class="ml-2">{{ item.label }}</span>
-        </a>
+        </a> -->
       </template>
       <template #center>
 
@@ -139,14 +148,28 @@ const toggle = (event) => {
 
       <template #end>
         <div class="flex items-center gap-6">
-          <IconField>
-            <InputIcon class="pi pi-search" />
-            <InputText v-model="value1" placeholder="busca tu busqueda😼" />
-          </IconField>
+          <div class="relative flex items-center">
+            <!-- Ícono que activa el input -->
+            <button @click="toggleInput" class="p-2 rounded-full transition">
+              <i class="pi pi-search text-gray-600"></i>
+            </button>
+
+            <!-- Input desplegable -->
+            <input
+              v-if="showInput"
+              v-model="searchQuery"
+              @blur="toggleInput"
+              @keyup.enter="startSearch"
+              type="text"
+              class="ml-2 transition-width duration-300 ease-in-out bg-transparent border-b border-gray-400 focus:outline-none focus:border-gray-200"
+              style="width: 0; opacity: 0;"
+              :style="{ width: showInput ? '200px' : '0', opacity: showInput ? 1 : 0 }"
+              placeholder="Buscar..."
+            />
+          </div>
 
           <!-- notificaciones -->
-          <Button type="button" icon="pi pi-bell" @click="toggle" severity="secondary" />
-
+          <Button  icon="pi pi-bell" @click="toggle" class="!bg-white !text-gray-600 !border-none">  </Button>
           <Popover ref="op">
             <div class="flex flex-col gap-4 w-[16rem]">
               <div>
@@ -156,19 +179,18 @@ const toggle = (event) => {
                 <span>no hay notificaciones</span>
               </div>
             </div>
-
-
           </Popover>
-
-          <Button @click="openPosition('topright')" severity="secondary" aria-label="Filter" style="min-width: 10rem "
-            class="bg-pink-400">
+        
+          
+          <div @click="openPosition('topright')" aria-label="Filter"
+            class="flex items-center justify-end sm:justify-start ">
             <Avatar image="https://i.pinimg.com/736x/9d/e6/64/9de6644331722c67e77da2b289bb20ea.jpg" shape="circle"
               class="mr-2" />
             <div class="flex flex-col justify-center ">
-              <span class="font-semibold text-sm">Maximiliano Milano</span>
-              <span class="text-sm">MASTER</span>
+              <span class="font-semibold text-sm hidden sm:inline-block">Maximiliano Milano</span>
+              <span class="text-sm hidden sm:inline-block">MASTER</span>
             </div>
-          </Button>
+          </div>
 
           <Dialog v-model:visible="visible" header="Cuenta" :style="{ width: '12rem' }" :position="position"
             :modal="true" :draggable="false">
@@ -189,3 +211,7 @@ const toggle = (event) => {
     </Menubar>
   </div>
 </template>
+<style scoped>
+input {
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;}
+</style>

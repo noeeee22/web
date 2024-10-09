@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import NavView from "@/components/NavView.vue";
-import FooterView from "@/components/footerView.vue";
+import NavView from "@/components/web/NavView.vue";
+import FooterView from "@/components/web/footerView.vue";
 import Button from "primevue/button";
 
 const isChatOpen = ref(false);
@@ -30,7 +30,7 @@ const toggleChat = () => {
         <!-- Ventana del chatbot -->
         <div
           v-if="isChatOpen"
-          class="fixed bottom-16 right-4 bg-pink-300 border rounded-lg p-4 shadow-lg w-72"
+          class="fixed bottom-16 right-4 bg-gray-200 border rounded-lg p-4 shadow-lg w-72"
         >
           <h3 class="text-lg font-semibold mb-2">Chatbot</h3>
           <p>¡Hola! ¿En qué puedo ayudarte?</p>
@@ -92,7 +92,9 @@ const toggleChat = () => {
       <div class="">
         <planesView />
       </div>
-      <div
+
+      <!-- formulario insecesario -->
+      <!-- <div
         class="flex flex-wrap justify-center my-5 bg-azulblue-500 rounded-3xl m-10"
       >
         <div
@@ -109,7 +111,7 @@ const toggleChat = () => {
             <FormView class="h-full" />
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="flex flex-wrap justify-center my-5">
         <div
           class="flex flex-col md:flex-row justify-center w-full gap-1 items-center"
@@ -122,7 +124,7 @@ const toggleChat = () => {
           </div>
         </div>
       </div>
-      <Button label="tetas" />
+
       <div class="">
         <FooterView />
       </div>

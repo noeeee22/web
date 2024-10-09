@@ -1,5 +1,5 @@
 <script setup>
-import tsi from "../assets/prueba.png";
+import tsi from "@/assets/prueba.png";
 </script>
 <template>
   <div

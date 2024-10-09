@@ -1,5 +1,5 @@
 <script setup>
-import sist from "../assets/sist.jpg";
+import sist from "@/assets/sist.jpg";
 </script>
 <template>
   <div

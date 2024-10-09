@@ -1,9 +1,9 @@
 <script setup>
-import zenda from "../assets/zenda.png";
-import zendapharma from "../assets/zendapharma.png";
-import flizzy from "../assets/flizzy2.png";
-import zendatours from "../assets/zendatours.png";
-import laboratorioClinico from "../assets/laboratorioClinico.png";
+import zenda from "@/assets/zenda.png";
+import zendapharma from "@/assets/zendapharma.png";
+import flizzy from "@/assets/flizzy2.png";
+import zendatours from "@/assets/zendatours.png";
+import laboratorioClinico from "@/assets/laboratorioClinico.png";
 </script>
 
 <template>

@@ -1,21 +1,38 @@
 <script setup>
 import { ref } from "vue";
 import navbar from "@/components/layout/menu/navbar.vue";
-import sidebar from "@/components/layout/menu/sidebar.vue";
 import panel from "@/components/layout/panel/panel.vue";
-import listatickets from "@/components/modules/tickets/listatickets.vue";
 import prueba2 from "@/components/modules/tickets/prueba2.vue";
-import modal from "@/components/modules/form/modal.vue";
+
 
 </script>
 
 <template>
-  <div class="h-full w-full">
-    <navbar />
-    <sidebar />
-    <panel />
-    <!-- <listatickets /> -->
+  <div class="w-full h-screen">
+    <!-- <ScrollPanel> -->
+
+    <navbar class="sticky top-0 right-0" />
+    <!-- <sidebar /> -->
+    <!-- <panel /> -->
     <!-- <prueba2 /> -->
     <!-- <modal /> -->
+    <div class="w-full flex-1 overflow-auto">
+      <div class="m-2 p-2">
+
+        <RouterView v-slot="{ Component }">
+          <component :is="Component" />
+        </RouterView>
+      </div>
+    </div>
+    <!-- <tableUsers /> -->
+    <!-- </ScrollPanel> -->
+
+    
+
   </div>
 </template>
+<style>
+::-webkit-scrollbar {
+  display: none;
+}
+</style>

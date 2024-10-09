@@ -8,6 +8,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import IconsResolver from "unplugin-icons/resolver";
 import { NaiveUiResolver, VueUseComponentsResolver, VueUseDirectiveResolver } from "unplugin-vue-components/resolvers";
 import Components from "unplugin-vue-components/vite";
+import {PrimeVueResolver} from '@primevue/auto-import-resolver';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,7 +20,7 @@ export default defineConfig({
     }),
     Components({
       dirs: ["./src/**"],
-      resolvers: [IconsResolver(), NaiveUiResolver(), VueUseComponentsResolver(), VueUseDirectiveResolver()],
+      resolvers: [IconsResolver(), NaiveUiResolver(), VueUseComponentsResolver(), VueUseDirectiveResolver(), PrimeVueResolver()],
       types: [
         {
           from: "vue-router",

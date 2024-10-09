@@ -1,6 +1,5 @@
 <script setup>
 import "primeicons/primeicons.css";
-import { defineProps } from 'vue';
 import Avatar from "primevue/avatar";
 import miau from "@/assets/miau.jpg";
 import Tag from 'primevue/tag';

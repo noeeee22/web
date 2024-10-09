@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import tsi2 from "../assets/tsi2.png";
+import tsi2 from "@/assets/tsi2.png";
 
 const handleClick = (option) => {
   if (option.command) {
@@ -88,7 +88,7 @@ const isDropdownOpen = ref(false);
 
           <template v-if="option.key === 'login'">
             <i-material-symbols-light-person
-              class="w-9 h-9 text-rose-400 hover:text-rose-700 transition duration-300"
+              class="w-9 h-9 text-ski-800 hover:text-sky-700 transition duration-300"
             ></i-material-symbols-light-person>
           </template>
         </div>
