@@ -11,7 +11,6 @@ import { useConfirm } from "primevue/useconfirm";
 import { useToast } from "primevue/usetoast";
 import Popover from 'primevue/popover';
 import { useRouter } from 'vue-router';
-import panel from "../panel/panel.vue";
 
 
 const confirm = useConfirm();
@@ -23,7 +22,7 @@ const items = ref([
     label: "Tickets",
     icon: "pi pi-ticket",
     command: ()=>{
-      router.push({ name: 'dataTable' });
+      router.push({ name: 'tableTickets' });
     }
   },
     {
@@ -120,7 +119,7 @@ const startSearch = () => {
   <div class="card top-0 left-0 w-full z-50 justify-between md:justify-evenly flex-row-reverse md:flex-row">
     <Menubar :model="items">
       <template #start>
-        <a href="panel">
+        <a href="panelPrincipal">
           <img :src="logo" alt="Logo" class="md:w-20 mr-3 w-20" />
         </a>
       </template>
@@ -137,10 +136,6 @@ const startSearch = () => {
           <span class="ml-2">{{ item.label }}</span>
           <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down ml-2" />
         </a>
-        <!-- <a class="flex items-center" v-bind="props.action">
-          <span :class="item.icon"></span>
-          <span class="ml-2">{{ item.label }}</span>
-        </a> -->
       </template>
       <template #center>
 

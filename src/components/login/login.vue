@@ -5,7 +5,7 @@ import FloatLabel from 'primevue/floatlabel';
 import Password from 'primevue/password';
 import Checkbox from 'primevue/checkbox';
 import Button from 'primevue/button';
-
+import imglog from '@/assets/imglog.jpeg'
 const pizza = ref();
 </script>
 
@@ -42,7 +42,7 @@ const pizza = ref();
     </div>
     <div class="hidden md:block md:w-1/2 h-full">
       <img
-        src="https://img3.wallspic.com/crops/1/2/2/0/4/140221/140221-agapornis-ave-budgericar-guacamayo-pico-3840x2160.jpg"
+        :src="imglog"
         alt="" class="w-full h-full object-cover">
     </div>
 

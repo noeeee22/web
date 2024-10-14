@@ -95,19 +95,21 @@ const formatDate = (value) => {
                     <template #header>
                         <div class="flex justify-between items-center mb-4">
                             <div>
-                                <span class="font-bold text-xl">LISTA TICKETS</span>
+                                <span class="font-bold text-xl">LISTA USUARIOS</span>
                             </div>
-                            <div class="flex justify-end">
+                            <div class="flex justify-end gap-5">
+                                <div>
+                                    <prueba
+                                        :title="'Agregar Usuario'"
+                                        :width="60"
+                                        :component="FormUsers"
+                                       />
+                                </div>
                                 <IconField>
                                     <InputIcon>
                                         <i class="pi pi-search" />
                                     </InputIcon>
-                                    <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
-                                    <prueba
-                                        :title="'Agregar Ticket'"
-                                        :width="60"
-                                        :component="FormUsers"
-                                       />
+                                    <InputText v-model="filters['global'].value" placeholder="Búsqueda" />
                                 </IconField>
                             </div>
                         </div>
@@ -120,7 +122,7 @@ const formatDate = (value) => {
                         </template>
                         <template #filter="{ filterModel, filterCallback }">
                             <InputText v-model="filterModel.value" type="text" @input="filterCallback()"
-                                placeholder="Search by name" />
+                                placeholder="Buscar por nombre" />
                         </template>
                     </Column>
                     <Column header="Date" filterField="date" dataType="date" style="min-width: 10rem">
@@ -128,7 +130,7 @@ const formatDate = (value) => {
                             {{ formatDate(data.date) }}
                         </template>
                         <template #filter="{ filterModel }">
-                            <DatePicker v-model="filterModel.value" dateFormat="dd/mm/yy" placeholder="mm/dd/yyyy" />
+                            <DatePicker v-model="filterModel.value" dateFormat="dd/MM/yy" placeholder="mm/dd/yyyy" />
                         </template>
                     </Column>
                     <Column header="Agent" filterField="representative" :showFilterMenu="false"
@@ -162,7 +164,7 @@ const formatDate = (value) => {
                         </template>
                         <template #filter="{ filterModel, filterCallback }">
                             <Select v-model="filterModel.value" @change="filterCallback()" :options="statuses"
-                                placeholder="Select One" style="min-width: 12rem" :showClear="true">
+                                placeholder="Selecciona uno" style="min-width: 12rem" :showClear="true">
                                 <template #option="slotProps">
                                     <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                                 </template>

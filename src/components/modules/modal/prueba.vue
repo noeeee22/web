@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import Dialog from 'primevue/dialog';
 
-const visible = ref(true);
+const visible = ref(false);
 
 const props = defineProps({ 
     title: "String",

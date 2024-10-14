@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import navbar from "@/components/layout/menu/navbar.vue";
-import panel from "@/components/layout/panel/panel.vue";
+import panel from "@/components/panelprincipal/panel.vue";
 import prueba2 from "@/components/modules/tickets/prueba2.vue";
 
 

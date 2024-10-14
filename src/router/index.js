@@ -14,8 +14,8 @@ const router = createRouter({
             component: () => import('../hooks/principalhp.vue'),
             children: [
                         {
-                            path: 'dataTabl',
-                            name: 'dataTable',
+                            path: 'tableTickets',
+                            name: 'tableTickets',
                             component: () => import('../components/modules/dataTables/tableTicktes.vue')
                         },
                         {
@@ -24,9 +24,9 @@ const router = createRouter({
                             component: () => import('../components/modules/dataTables/tableUsers.vue')
                         },
                         {
-                            path:'panel',
-                            name:'panel',
-                            component:()=> import('@/components/layout/panel/panel.vue')
+                            path:'panelPrincipal',
+                            name:'panelPrincipal',
+                            component:()=> import('@/components/panelprincipal/panelPrincipal.vue')
                         }
                     ]            
         },
