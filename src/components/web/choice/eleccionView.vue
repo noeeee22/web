@@ -12,7 +12,7 @@ const styleIcon =
 
 <template>
   <div
-    class="flex flex-wrap mx-10 w-full items-center justify-center gap-8 md:w-2/2 md:gap-x-28 mb-6 md:mb-8"
+    class="flex flex-wrap mx-10 w-full items-center justify-center gap-8 md:w-2/2 md:gap-x-28 mb-6 md:mb-8 select-none"
   >
     <div class="cuadrito">
       <div :class="styleIcon">
@@ -22,7 +22,7 @@ const styleIcon =
         >
       </div>
       <div
-        class="absolute inset-0 bg-azulblue-500 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-500 bg-opacity-0 hover:bg-gradient-to-tl hover:from-azulblue-600 hover:to-azulblue-900 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Soporte Técnico Especializado
@@ -41,7 +41,7 @@ const styleIcon =
         <span class="font-bold text-xl">Innovación y Tecnología</span>
       </div>
       <div
-        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-500 bg-opacity-0 hover:bg-gradient-to-tl hover:from-azulblue-600 hover:to-azulblue-900 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Innovación y Tecnología
@@ -59,7 +59,7 @@ const styleIcon =
         <span class="font-bold text-xl"> Soluciones Personalizadas</span>
       </div>
       <div
-        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-500 bg-opacity-0 hover:bg-gradient-to-tl hover:from-azulblue-600 hover:to-azulblue-900 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Soluciones Personalizadas
@@ -77,7 +77,7 @@ const styleIcon =
         <span class="font-bold text-xl"> Experiencia y Confianza</span>
       </div>
       <div
-        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-500 bg-opacity-0 hover:bg-gradient-to-tl hover:from-azulblue-600 hover:to-azulblue-900 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Experiencia y Confianza
@@ -95,7 +95,7 @@ const styleIcon =
         <span class="font-bold text-xl"> Calidad Garantizada</span>
       </div>
       <div
-        class="absolute inset-0 bg-azulblue-600 bg-opacity-0 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
+        class="absolute inset-0 bg-azulblue-500 bg-opacity-0 hover:bg-gradient-to-tl hover:from-azulblue-600 hover:to-azulblue-900 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl"
       >
         <h1 class="title text-center mb-2 font-bold text-xl">
           Calidad Garantizada
@@ -112,7 +112,7 @@ const styleIcon =
         <img :src="atencion" alt="" />
         <span class="font-bold text-xl"> Atención al Cliente Excepcional</span>
       </div>
-      <div class="hoverrEleccion">
+      <div class="absolute inset-0 bg-azulblue-500 bg-opacity-0 hover:bg-gradient-to-tl hover:from-azulblue-600 hover:to-azulblue-900 hover:bg-opacity-100 transition duration-300 translate-y-6 hover:translate-y-0 flex flex-col justify-center items-center rounded-3xl">
         <h1 class="title text-center mb-2 font-bold text-xl">
           Atención al Cliente Excepcional
         </h1>

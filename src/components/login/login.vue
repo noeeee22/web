@@ -42,7 +42,7 @@ const pizza = ref();
     </div>
     <div class="hidden md:block md:w-1/2 h-full">
       <img
-        :src="imglog"
+        src="https://img.freepik.com/vector-gratis/tecnologia-red-futurista-azul_53876-100679.jpg?w=1380&t=st=1729111366~exp=1729111966~hmac=7d2671c2f8e2c25db839592da9d76849d191e0a7cb4eb0f743da4cedec7a655f"
         alt="" class="w-full h-full object-cover">
     </div>
 

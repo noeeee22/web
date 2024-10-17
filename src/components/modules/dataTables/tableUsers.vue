@@ -1,17 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { CustomerService } from '@/service/tetas';
-import IconField from "primevue/iconfield";
-import InputIcon from "primevue/inputicon";
-import InputText from "primevue/inputtext";
 import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
-import Card from 'primevue/card';
 import FormUsers from '../modal/FormUsers.vue';
 
 const customers = ref();
 const filters = ref({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
     name: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
+    activity: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     date: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.DATE_IS }] },
     representative: { value: null, matchMode: FilterMatchMode.IN },
     status: { value: null, matchMode: FilterMatchMode.EQUALS },
@@ -64,20 +61,19 @@ const getSeverity = (status) => {
 const getStatusLabel = (status) => {
     switch (status) {
         case 'unqualified':
-            return 'Alta'; // Muestra "Alta" en lugar de "unqualified"
+            return 'Ocupado'; // Muestra "Alta" en lugar de "unqualified"
         case 'qualified':
             return 'Baja'; // Muestra "Baja" en lugar de "qualified"
         case 'new':
-            return 'Media'; // Muestra "Media" en lugar de "new"
+            return 'Disponible'; // Muestra "Media" en lugar de "new"
         default:
             return status; // Muestra el estado tal como está si no coincide con ninguno de los anteriores
     }
 }
 
 
-
 const formatDate = (value) => {
-    return value.toLocaleDateString('en-US', {
+    return value.toLocaleDateString('es-PE', {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric'
@@ -101,7 +97,7 @@ const formatDate = (value) => {
                                 <div>
                                     <prueba
                                         :title="'Agregar Usuario'"
-                                        :width="60"
+                                        :width="80"
                                         :component="FormUsers"
                                        />
                                 </div>
@@ -116,24 +112,7 @@ const formatDate = (value) => {
                     </template>
                     <template #empty> No customers found. </template>
                     <template #loading> Loading customers data. Please wait. </template>
-                    <Column field="name" header="Name" style="min-width: 12rem">
-                        <template #body="{ data }">
-                            {{ data.name }}
-                        </template>
-                        <template #filter="{ filterModel, filterCallback }">
-                            <InputText v-model="filterModel.value" type="text" @input="filterCallback()"
-                                placeholder="Buscar por nombre" />
-                        </template>
-                    </Column>
-                    <Column header="Date" filterField="date" dataType="date" style="min-width: 10rem">
-                        <template #body="{ data }">
-                            {{ formatDate(data.date) }}
-                        </template>
-                        <template #filter="{ filterModel }">
-                            <DatePicker v-model="filterModel.value" dateFormat="dd/MM/yy" placeholder="mm/dd/yyyy" />
-                        </template>
-                    </Column>
-                    <Column header="Agent" filterField="representative" :showFilterMenu="false"
+                    <Column header="Agentes" filterField="representative" :showFilterMenu="false"
                         style="min-width: 14rem">
                         <template #body="{ data }">
                             <div class="flex items-center gap-2">
@@ -158,7 +137,33 @@ const formatDate = (value) => {
                             </MultiSelect>
                         </template>
                     </Column>
-                    <Column field="status" header="Status" :showFilterMenu="false" style="min-width: 12rem">
+                    <Column field="name" header="Rol" style="min-width: 12rem">
+                        <template #body="{ data }">
+                            {{ data.name }}
+                        </template>
+                        <template #filter="{ filterModel, filterCallback }">
+                            <InputText v-model="filterModel.value" type="text" @input="filterCallback()"
+                                placeholder="Buscar por nombre" />
+                        </template>
+                    </Column>
+                    <Column field="activity" header="Tickets Asignados" style="min-width: 12rem">
+                        <template #body="{ data }">
+                            {{ data.activity }}
+                        </template>
+                        <template #filter="{ filterModel, filterCallback }">
+                            <InputText v-model="filterModel.value" type="text" @input="filterCallback()"
+                                placeholder="Buscar Ticket" />
+                        </template>
+                    </Column>
+                    <Column header="Última Asignación " filterField="date" dataType="date" style="min-width: 10rem">
+                        <template #body="{ data }">
+                            {{ formatDate(data.date) }}
+                        </template>
+                        <template #filter="{ filterModel }">
+                            <DatePicker v-model="filterModel.value" dateFormat="dd/MM/yy" placeholder="mm/dd/yyyy" />
+                        </template>
+                    </Column>
+                    <Column field="status" header="Disponibilidad" :showFilterMenu="false" style="min-width: 12rem">
                         <template #body="{ data }">
                             <Tag :value="getStatusLabel(data.status)" :severity="getSeverity(data.status)" />
                         </template>

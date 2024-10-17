@@ -46,7 +46,7 @@ const agent = ref([
                             placeholder="Seleccione un agente" class="w-full md:w-64" />
                     </div>
                 </div>
-                <Editor v-model="value" editorStyle="height: 240px" />
+                <Editor v-model="value" editorStyle="height: 240px"/>
                 <Button label="Registrar" class="my-2 justify-center items-center w-full"
                     style="background-color: hotpink;" />
             </div>

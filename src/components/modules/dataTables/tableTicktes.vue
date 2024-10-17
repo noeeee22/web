@@ -78,7 +78,7 @@ const getStatusLabel = (status) => {
 
 
 const formatDate = (value) => {
-    return value.toLocaleDateString('en-US', {
+    return value.toLocaleDateString('es-PE', {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric'
@@ -111,23 +111,32 @@ const formatDate = (value) => {
                                     <InputIcon>
                                         <i class="pi pi-search" />
                                     </InputIcon>
-                                    <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                                    <InputText v-model="filters['global'].value" placeholder="Búsqueda" />
                                 </IconField>
                             </div>
                         </div>
                     </template>
                     <template #empty> No customers found. </template>
                     <template #loading> Loading customers data. Please wait. </template>
-                    <Column field="name" header="Name" style="min-width: 12rem">
+                    <Column field="name" header="Nombre" style="min-width: 12rem">
                         <template #body="{ data }">
                             {{ data.name }}
                         </template>
                         <template #filter="{ filterModel, filterCallback }">
                             <InputText v-model="filterModel.value" type="text" @input="filterCallback()"
-                                placeholder="Search by name" />
+                                placeholder="Buscar por Nombre" />
                         </template>
                     </Column>
-                    <Column header="Date" filterField="date" dataType="date" style="min-width: 10rem">
+                    <Column field="name" header="Asunto" style="min-width: 12rem">
+                        <template #body="{ data }">
+                            {{ data.name }}
+                        </template>
+                        <template #filter="{ filterModel, filterCallback }">
+                            <InputText v-model="filterModel.value" type="text" @input="filterCallback()"
+                                placeholder="Buscar por Nombre" />
+                        </template>
+                    </Column>
+                    <Column header="Fecha" filterField="date" dataType="date" style="min-width: 10rem">
                         <template #body="{ data }">
                             {{ formatDate(data.date) }}
                         </template>
@@ -135,7 +144,7 @@ const formatDate = (value) => {
                             <DatePicker v-model="filterModel.value" dateFormat="dd/mm/yy" placeholder="mm/dd/yyyy" />
                         </template>
                     </Column>
-                    <Column header="Agent" filterField="representative" :showFilterMenu="false"
+                    <Column header="Agente" filterField="representative" :showFilterMenu="false"
                         style="min-width: 14rem">
                         <template #body="{ data }">
                             <div class="flex items-center gap-2">
@@ -160,13 +169,13 @@ const formatDate = (value) => {
                             </MultiSelect>
                         </template>
                     </Column>
-                    <Column field="status" header="Status" :showFilterMenu="false" style="min-width: 12rem">
+                    <Column field="status" header="Estado" :showFilterMenu="false" style="min-width: 12rem">
                         <template #body="{ data }">
                             <Tag :value="getStatusLabel(data.status)" :severity="getSeverity(data.status)" />
                         </template>
                         <template #filter="{ filterModel, filterCallback }">
                             <Select v-model="filterModel.value" @change="filterCallback()" :options="statuses"
-                                placeholder="Select One" style="min-width: 12rem" :showClear="true">
+                                placeholder="Seleciona uno" style="min-width: 12rem" :showClear="true">
                                 <template #option="slotProps">
                                     <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                                 </template>

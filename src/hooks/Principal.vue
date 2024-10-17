@@ -22,7 +22,7 @@ const toggleChat = () => {
         <!-- Botón flotante -->
         <button
           @click="toggleChat"
-          class="fixed bottom-4 right-4 bg-azulblue-300 text-white p-4 rounded-full shadow-lg hover:bg-azulblue-600 focus:outline-none"
+          class="fixed bottom-4 right-4 bg-azulblue-300 hover:bg-azulblue-600 text-white p-4 rounded-full shadow-lg  focus:outline-none"
         >
           💬
         </button>
@@ -47,7 +47,7 @@ const toggleChat = () => {
         </div>
       </div>
 
-      <div class="flex justify-center items-center flex-wrap mx-10">
+      <!-- <div class="flex justify-center items-center flex-wrap mx-10">
         <div class="container">
           <div
             class="my-10 m-3 md:m-10 bg-gray-200 p-6 md:p-7 rounded-3xl"
@@ -68,7 +68,7 @@ const toggleChat = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div id="eleccion">
         <div class="text-center text-azulblue-400 font-bold my-8 text-4xl">
@@ -82,7 +82,6 @@ const toggleChat = () => {
           </div>
         </div>
       </div>
-
       <h1
         class="text-center text-azulblue-400 font-bold my-8 text-4xl"
         id="plan"
@@ -92,6 +91,7 @@ const toggleChat = () => {
       <div class="">
         <planesView />
       </div>
+
 
       <!-- formulario insecesario -->
       <!-- <div
@@ -114,7 +114,7 @@ const toggleChat = () => {
       </div> -->
       <div class="flex flex-wrap justify-center my-5">
         <div
-          class="flex flex-col md:flex-row justify-center w-full gap-1 items-center"
+          class="flex flex-col lg:flex-row md:flex-col justify-center w-full gap-1 items-center"
         >
           <div class="container w-full md:w-1/2 lg:w-1/4 flex flex-col">
             <HorarioView class="h-full" />

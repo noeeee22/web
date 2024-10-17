@@ -45,7 +45,7 @@ const openPosition = (pos) => {
 const confirm1 = () => {
   confirm.require({
     message: 'Are you sure you want to proceed?',
-    header: 'Confirmation',
+    header: 'Ajustes',
     icon: 'pi pi-exclamation-triangle',
     rejectProps: {
       label: 'Cancel',
@@ -68,7 +68,7 @@ const confirm1 = () => {
 const confirm2 = () => {
   confirm.require({
     message: '¿Seguro que desea cerrar sesion?',
-    header: 'Danger Zone',
+    header: 'Cerrar sesion',
     icon: 'pi pi-info-circle',
     rejectLabel: 'Cancelar',
     rejectProps: {
@@ -168,7 +168,7 @@ const startSearch = () => {
           <Popover ref="op">
             <div class="flex flex-col gap-4 w-[16rem]">
               <div>
-                <span class="font-medium block mb-2">Share this document</span>
+                <span class="block mb-2 font-semibold text-lg">Notificaciones</span>
               </div>
               <div>
                 <span>no hay notificaciones</span>

@@ -3,10 +3,19 @@
 </script>
 
 <template>
-    <Card>
-        <template #title>TICKETS NO RESUELTOS</template>
-        <template #content>
-            <span>gfgfgfgf</span>
-        </template>
-    </Card>
+    <div class="flex justify-start xl:ml-44 md:ml-10" >
+        <Card class="!md:w-80 !m-4 !p-2 " style="width: 40rem;">
+            <template #title >TICKETS NO RESUELTOS</template>
+            <template #content>
+                <div>
+                    <div class="flex items-center justify-between mt-5">
+                        <span>Melany Vasquez</span>
+                        <Tag severity="warn" class="borde">Sin revisar</Tag>
+                    </div>
+                    <Divider type="solid" />
+                </div>
+
+            </template>
+        </Card>
+    </div>
 </template>

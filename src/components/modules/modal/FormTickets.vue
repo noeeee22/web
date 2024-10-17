@@ -30,7 +30,7 @@ const agent = ref([
                 <InputText id="username" v-model="ticket" aria-describedby="username-help" class="col-span-10" />
             </div>
         </div>
-        <div class="grid grid-cols-12 gap-4">
+        <div class="grid grid-cols-12 gap-4 my-4">
 
             <div class="flex flex-col col-span-12 md:col-span-6">
                 <label for="username">Estado</label>
@@ -44,7 +44,7 @@ const agent = ref([
             </div>
         </div>
         
-        <Editor v-model="value" editorStyle="height: 240px" class="my-2" />
-        <Button label="Registrar" class=" w-full" style="background-color: hotpink;" />
+        <Editor v-model="value" editorStyle="height: 240px" class="mb-3" />
+        <Button label="Registrar" class=" w-full !bg-cyan-600 !border-none hover:!bg-cyan-500"/>
     </div>
 </template>

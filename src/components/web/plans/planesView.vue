@@ -19,7 +19,7 @@ const iconc = IconMaterialSymbolsWorkspacePremiumRounded;
       />
       <planView
         ico="iconc"
-        titulo="'Plan C'"
+        titulo="Plan C"
         descripcion="Para grandes empresas: automatización y análisis en tiempo real. Máxima eficiencia y personalización."
         precio="s/.200"
       />

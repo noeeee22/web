@@ -20,11 +20,6 @@ const optionsMenu = [
     key: "systems",
     command: "#servicios",
   },
-  {
-    label: "Servicios",
-    key: "servicios",
-    command: "#servicios",
-  },
   { label: "Porque Elegirnos", key: "choice", command: "#eleccion" },
   {
     label: "Planes",
@@ -34,7 +29,7 @@ const optionsMenu = [
   {
     label: "Contactenos",
     key: "Contact",
-    command: "#tetas",
+    command: "#contact",
   },
   {
     label: "Consulta CPE",

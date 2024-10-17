@@ -13,7 +13,7 @@ const props = defineProps({
 </script>
 <template>
     <div class="card flex justify-center">
-        <Button icon="pi pi-plus-circle" severity="contrast" @click="visible = true" />
+        <Button icon="pi pi-plus-circle" severity="contrast" @click="visible = true" class="!bg-cyan-600 !border-none" />
         <Dialog v-model:visible="visible" modal :header="props.title" :style="{ width: props.width + 'vh'}">
                <component :is="props.component" />
         </Dialog>

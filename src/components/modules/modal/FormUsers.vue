@@ -6,11 +6,10 @@ import Editor from 'primevue/editor';
 const value = ref('');
 const ticket = ref('');
 
-const selectedState = ref();
-const state = ref([
-    { name: 'Alta', code: 'NY' },
-    { name: 'Media', code: 'RM' },
-    { name: 'Baja', code: 'LDN' },
+const selectedAvailability = ref();
+const availability = ref([
+    { name: 'Disponible', code: 'Ds' },
+    { name: 'Ocupado', code: 'Oc' },
 ]);
 
 const selectedAgent = ref();
@@ -20,31 +19,50 @@ const agent = ref([
     { name: 'igriega', code: 'LDN' },
 ]);
 
+const selectedRol = ref();
+const rol = ref([
+    { name: 'Admin', code: 'AM' },
+    { name: 'Agente', code: 'AG' },
+    { name: 'Usuario', code: 'US' },
+]);
+
 </script>
 
 <template>
     <div class="items-center">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-3">
             <div class="col-span-12 flex flex-col">
-                <label for="username">Tickets</label>
-                <InputText id="username" v-model="ticket" aria-describedby="username-help" class="col-span-10" />
-            </div>
-        </div>
-        <div class="grid grid-cols-12 gap-4">
-<!-- cambiar -->
-            <div class="flex flex-col col-span-12 md:col-span-6">
-                <label for="username">Estado</label>
-                <Select v-model="selectedState" :options="state" optionLabel="name" placeholder="Seleccione el estado"
-                class="w-full"/>
-            </div>
-            <div class="flex flex-col col-span-12 md:col-span-6">
-                <label for="username">Asignar Agente</label>
-                <Select v-model="selectedAgent" :options="agent" optionLabel="name" placeholder="Seleccione un agente"
-                class="w-full"/>
+                <div class="grid grid-cols-12 gap-4 my-4">
+                    <div class="flex flex-col col-span-12 md:col-span-6">
+                        <label for="username">Asignar Agente</label>
+                        <Select v-model="selectedAgent" :options="agent" optionLabel="name" placeholder="Seleccione un agente"
+                        class="w-full"/>
+                    </div>
+                    <div class="flex flex-col col-span-12 md:col-span-6">
+                        <label for="username">Rol</label>
+                        <Select v-model="selectedRol" :options="rol" optionLabel="name" placeholder="Seleccione el estado"
+                        class="w-full"/>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 gap-4 my-4">
+                    <div class="flex flex-col col-span-12 md:col-span-4">
+                        <label for="username">Tickets Asignados</label>
+                        <Select :options="number" optionLabel="name" placeholder="Seleccione un agente"
+                        class="w-full"/>
+                    </div>
+                    <div class="flex flex-col col-span-12 md:col-span-4">
+                        <label for="username">Ultima asignacion</label>
+                        <DatePicker v-model="date" dateFormat="dd/mm/yy"/>
+                    </div>
+                    <div class="flex flex-col col-span-12 md:col-span-4">
+                        <label for="username">Disponiblidad</label>
+                        <Select v-model="selectedAvailability" :options="availability" optionLabel="name" placeholder="Seleccione el estado"
+                        class="w-full"/>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <Editor v-model="value" editorStyle="height: 240px" class="my-2" />
-        <Button label="Registrar" class=" w-full" style="background-color: hotpink;" />
+        <Button label="Registrar" class=" w-full !bg-cyan-600 !border-none hover:!bg-cyan-500" />
     </div>
 </template>
